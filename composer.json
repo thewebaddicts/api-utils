@@ -1,0 +1,31 @@
+{
+    "name": "twa/api-utils",
+    "description": "This package is for uikit provided by thewebaddicts",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "twa\\apiutils\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hovig Senekjian",
+            "email": "hovig@thewebaddicts.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "twa\\apiutils\\Providers\\DefaultServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": []
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "livewire/livewire": "^3.5"
+    }
+}
