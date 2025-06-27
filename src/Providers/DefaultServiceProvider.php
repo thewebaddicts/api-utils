@@ -1,6 +1,6 @@
 <?php
 
-namespace twa\uikit\Providers;
+namespace twa\apiutils\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
