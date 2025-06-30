@@ -30,6 +30,6 @@ if (!function_exists('clean_request')) {
 if (!function_exists('notification')) {
     function notification($action = null)
     {
-        return (new twa\apiutils\Classes($action));
+        return (new twa\apiutils\Classes\Notification($action));
     }
 }
