@@ -103,7 +103,7 @@ trait APITrait
         ], ($notification->type ?? null) == "error" ? 400 : 200);
     }
 
-    public function response(Notification $notification)
+    public function response(Notification $notification , $status = null)
     {
         $request = $this->getRequest();
 
@@ -115,9 +115,12 @@ trait APITrait
             'message' => $notification->message
         ];
 
+
+        $status = $status ? $status : (($notification->type ?? null) == "error" ? 400 : 200);
+
         return response()->json([
             'response' => $response,
             'request' => $request
-        ], ($notification->type ?? null) == "error" ? 400 : 200);
+        ], $status);
     }
 }
